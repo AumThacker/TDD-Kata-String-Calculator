@@ -37,12 +37,17 @@ public class StringCalculatorKataTest {
     }
 
     @Test
-    public void twoNumbersCommaDelimited() {
+    public void twoNumbers() {
         assertEquals(cal.Add("1,2"), 3);
     }
     
     @Test
     public void unknownNumbers() {
         assertEquals(cal.Add("1,2,3,4"),10);
+    }
+    
+    @Test
+    public void twoNumbersNewLine() {
+        assertEquals(cal.Add("1\n2"),3);
     }
 }

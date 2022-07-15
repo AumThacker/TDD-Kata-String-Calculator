@@ -10,7 +10,6 @@ package stringcalculatorkata;
  * @author Aum Thacker
  */
 public class StringCalculatorKata {
-
     /**
      * @param args the command line arguments
      */
@@ -23,7 +22,7 @@ public class StringCalculatorKata {
         } else if (numbers.length() == 1) {
             return stringToInt(numbers);
         } else {
-            String[] nums = numbers.split(",");
+            String[] nums = numbers.split(",|\n");
             return getSum(nums);
         }
     }
