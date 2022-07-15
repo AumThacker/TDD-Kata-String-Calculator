@@ -50,4 +50,9 @@ public class StringCalculatorKataTest {
     public void twoNumbersNewLine() {
         assertEquals(cal.Add("1\n2"),3);
     }
+    
+    @Test
+    public void customDelimiter() {
+        assertEquals(cal.Add("//;\n1;2"),3);
+    }
 }

@@ -22,7 +22,15 @@ public class StringCalculatorKata {
         } else if (numbers.length() == 1) {
             return stringToInt(numbers);
         } else {
-            String[] nums = numbers.split(",|\n");
+            String[] nums;
+            if(numbers.charAt(0) == '/' && numbers.charAt(1) == '/'){
+                String[] lines = numbers.split("\n");
+                char split_char = lines[0].charAt(2);
+                nums = lines[1].split(Character.toString(split_char));
+            }
+            else{
+                nums = numbers.split(",|\n");
+            }
             return getSum(nums);
         }
     }
