@@ -24,8 +24,17 @@ public class StringCalculatorKata {
             return stringToInt(numbers);
         } else {
             String[] nums = numbers.split(",");
-            return stringToInt(nums[0]) + stringToInt(nums[1]);
+            return getSum(nums);
         }
+    }
+    
+    public int getSum(String[] nums)
+    {
+        int sum=0;
+        for (String num : nums) {
+            sum += stringToInt(num);
+        }
+        return sum;
     }
     
     public int stringToInt(String str) {

@@ -41,4 +41,8 @@ public class StringCalculatorKataTest {
         assertEquals(cal.Add("1,2"), 3);
     }
     
+    @Test
+    public void unknownNumbers() {
+        assertEquals(cal.Add("1,2,3,4"),10);
+    }
 }
