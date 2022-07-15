@@ -22,7 +22,7 @@ public class StringCalculatorKata {
         if (numbers.isEmpty()) {
             return 0;
         } else if (numbers.length() == 1) {
-            return stringToInt(numbers);
+            return Integer.parseInt(numbers);
         } else {
             String[] nums;
             if(numbers.charAt(0) == '/' && numbers.charAt(1) == '/'){
@@ -45,8 +45,11 @@ public class StringCalculatorKata {
             if(Integer.parseInt(num) < 0){
                 neg_nums.add(Integer.parseInt(num));
             }
+            else if(Integer.parseInt(num) > 1000){
+                continue;
+            }
             else{
-                sum += stringToInt(num);
+                sum += Integer.parseInt(num);
             }
         }
         if(neg_nums.size() != 0){
@@ -58,9 +61,5 @@ public class StringCalculatorKata {
             throw new Exception(exc_msg);
         }
         return sum;
-    }
-    
-    public int stringToInt(String str) {
-        return Integer.parseInt(str);
     }
 }

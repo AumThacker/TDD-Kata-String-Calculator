@@ -61,4 +61,9 @@ public class StringCalculatorKataTest {
     public void negativeNumber() throws Exception {
         cal.Add("-1\n-2,3");
     }
+    
+    @Test
+    public void ignoreNumber() throws Exception{
+        assertEquals(cal.Add("1,1001,2"),3);
+    }
 }
